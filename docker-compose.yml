@@ -1,10 +1,7 @@
-version: '3'
-
 services:
-  database:
-    image: postgres
+  backend:
+    build: .
     restart: always
     ports:
-      - ${DATASOURCE_PORT}:5432
-    environment:
-      POSTGRES_PASSWORD: ${DATASOURCE_PASSWORD}
+      - 3000:3000
+    entrypoint: ["sh", "./entrypoint.sh"]
