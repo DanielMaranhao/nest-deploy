@@ -40,4 +40,6 @@ COPY --chown=node:node package.json yarn.lock ./
 COPY --chown=node:node entrypoint.sh ./
 COPY --chown=node:node tsconfig.json ./
 
+COPY --chown=node:node certs ./certs
+
 EXPOSE 3000
