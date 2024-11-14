@@ -6,5 +6,4 @@ export const ENV_VALIDATION_SCHEMA = Joi.object({
   DATASOURCE_HOST: Joi.required(),
   DATASOURCE_PORT: Joi.number().integer().positive().required(),
   DATASOURCE_DATABASE: Joi.required(),
-  DATASOURCE_URL: Joi.required(),
 });
